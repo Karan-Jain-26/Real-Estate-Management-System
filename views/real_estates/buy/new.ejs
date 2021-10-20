@@ -1,0 +1,69 @@
+<%include ../../partials/header%>
+    <div class="ui grid center aligned">
+        <div class="ten wide computer ten wide tablet sixteen wide mobile column">
+            <form class="ui form segment" action="/real-estates/buy" method="POST">
+                <h4 class="ui dividing header">Sell - Register Property</h4>
+                <input type="text" name="property[status]" value="buy" hidden>
+                <div class="two fields">
+                    <div class="ten wide field">
+                        <label>Property Name</label>
+                        <input type="text" name="property[name]" placeholder="Gurukrupa Palace" required="required">
+                    </div>
+                    <div class="six wide field">
+                        <label>Price</label>
+                        <input type="number" name="property[price]" placeholder="Rs. 10,00,000" required="required">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Property Image</label>
+                    <input type="text" name="property[image]" placeholder="www.example.com/property-image" required="required">
+                </div>
+                <div class="field">
+                        <label>Description</label>
+                        <textarea name="property[description]" placeholder="A beautiful mountain view..." required="required"></textarea>
+                    </div>
+                <div class="four fields">
+                    <div class="field">
+                        <label>Square Feet</label>
+                        <input type="number" min="1" name="property[sqft]" placeholder="115" required="required">
+                    </div>
+                    <div class="field">
+                        <label>Bedrooms</label>
+                        <input type="number" min="1" name="property[bedrooms]" placeholder="4" required="required">
+                    </div>
+                    <div class="field">
+                        <label>Bathrooms</label>
+                        <input type="number" num="1" name="property[bathrooms]" placeholder="1" required="required">
+                    </div>
+                    <div class="field">
+                        <label>Parking Spots</label>
+                        <input type="number" min="0"  name="property[parkingSpots]" placeholder="2" required="required">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Address</label>
+                    <div class="fields">
+                        <div class="twelve wide field">
+                            <input type="text" minlength="3" name="property[street]" placeholder="406, Gurukrupa Palace, Nagpur" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="three fields">
+                    <div class="ten wide field">
+                        <label>State</label>
+                        <input type="text" minlength="3" name="property[state]" placeholder="Maharashtra" required="required">
+                    </div>
+                    <div class="six wide field">
+                        <label>Zip Code</label>
+                        <input type="number" minlength="3" name="property[zipCode]" placeholder="440006" required="required">
+                    </div>
+                    <div class="ten wide field">
+                        <label>Country</label>
+                        <input type="text" minlength="3" name="property[country]" placeholder="India" required="required">
+                    </div>
+                </div>
+                <button class="ui button green" tabindex="0">Register Real Estate</button>
+            </form>
+        </div>
+    </div>
+<%include ../../partials/footer%>
